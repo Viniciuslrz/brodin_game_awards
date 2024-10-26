@@ -3,11 +3,12 @@ import type { Game } from "@/types/Game";
 import { title } from "process";
 
 type Props = {
+    pagenumber: number,
     category: string,
     games: Game[]
 }
 
-export const VotingPage = ({games:initialGames, category}:Props) =>{
+export const VotingPage = ({games:initialGames, category, pagenumber}:Props) =>{
     const [games, setGames] = useState(initialGames);
 
     const handleCheck = (id: number) => {
@@ -19,7 +20,7 @@ export const VotingPage = ({games:initialGames, category}:Props) =>{
     };
 
     return(
-        <div className="w-5/6 h-5/6 rounded-md flex flex-col justify-self-center">
+        <div className={`w-5/6 h-ldv rounded-md pb-2 flex flex-col justify-self-center ${pagenumber==1?"bg-blue-300":pagenumber==2?"bg-yellow-300":"bg-red-300"}`}>
             <p className="mt-2 mx-auto font-bold italic justify-self-center">{category}</p>
             <ul className="mx-auto">
                 {games.map((game, index)=>
