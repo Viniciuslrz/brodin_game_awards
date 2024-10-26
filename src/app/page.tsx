@@ -8,6 +8,7 @@ import { FogoDePalhaDoAno } from "@/data/FogoDePalhaDoAno";
 import { TochaOlimpica } from "@/data/TochaOlimpica";
 import { CustomButton } from "@/components/CustomButton";
 import { ConfirmationModal } from "@/components/ConfirmationModal";
+import { TodasAsTribos } from "@/data/TodasAsTribos";
 
 const page = () => {
   const [pageCounter, setpageCounter] = useState<number>(0);
@@ -42,7 +43,7 @@ const page = () => {
         }
         {pageCounter==1&&<VotingPage pagenumber={1} category={"Fogo de Palha do Ano"} games={FogoDePalhaDoAno}/>}
         {pageCounter==2&&<VotingPage pagenumber={2} category={"Tocha Olímpica"} games={TochaOlimpica}/>}
-        {pageCounter==3&&<VotingPage pagenumber={3} category={"Jogo que Uniu Todas as Tribos"} games={FogoDePalhaDoAno}/>}
+        {pageCounter==3&&<VotingPage pagenumber={3} category={"Jogo que Uniu Todas as Tribos"} games={TodasAsTribos}/>}
         {pageCounter==4&&<HighlightsPage/>}
         {pageCounter==5&&<ResultsPage/>}
         {pageCounter>0&&

@@ -12,7 +12,6 @@ export const TochaOlimpica:Game[] =[
     {id: 9, name:"Pokemon TCG", check: false},
     {id: 10, name:"Pokemon Unite", check: false},
     {id: 11, name:"Rainbow Six Siege", check: false},
-    {id: 12, name:"Pokemon TCG", check: false},
-    {id: 13, name:"Pokemon Unite", check: false},
-    {id: 14, name:"Yu-Gi-Oh Duel Links", check: false}
+    {id: 12, name:"World of Warcraft", check: false},
+    {id: 13, name:"Yu-Gi-Oh Duel Links", check: false}
 ];
