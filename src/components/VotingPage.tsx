@@ -1,6 +1,5 @@
 import { useState } from "react";
 import type { Game } from "@/types/Game";
-import { title } from "process";
 
 type Props = {
     pagenumber: number,
@@ -20,7 +19,7 @@ export const VotingPage = ({games:initialGames, category, pagenumber}:Props) =>{
     };
 
     return(
-        <div className={`w-5/6 h-ldv rounded-md pb-2 flex flex-col justify-self-center ${pagenumber==1?"bg-blue-300":pagenumber==2?"bg-yellow-300":"bg-red-300"}`}>
+        <div className={`w-5/6 rounded-md my-2 pb-2 flex flex-col justify-self-center ${pagenumber==1?"bg-blue-300":pagenumber==2?"bg-yellow-300":"bg-red-300"}`}>
             <p className="mt-2 mx-auto font-bold italic justify-self-center">{category}</p>
             <ul className="mx-auto">
                 {games.map((game, index)=>

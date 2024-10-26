@@ -14,7 +14,7 @@ const page = () => {
   const [toggleModal, setToggleModal] = useState<boolean>(false);
  
   const handleNextPage = (page:number) =>{
-    if(page>0){
+    if(page>0 && page<4){
       handleModal();
     }
     setpageCounter(pageCounter=>pageCounter+1);
@@ -29,12 +29,11 @@ const page = () => {
   };
 
   return(
-    <div className="w-screen min-h-dvh max-h-lvh flex flex-col items-center bg-black text-black mt-2 py-2">
+    <div className={`w-screen min-h-dvh max-h-lvh flex flex-col items-center bg-black text-black mt-2 py-2 ${pageCounter==0&&"justify-center"}`}>
       {toggleModal==true&&
         <ConfirmationModal confirmVote={()=>handleNextPage(pageCounter)} changeVote={handleModal}/>
       }
       <div className="w-5/6 h-5/6 rounded-md grid bg-slate-300 text-black">
-        <p className="mt-2 mx-auto justify-self-center"> </p>
         {pageCounter==0&&<LandingPage/>}
         {pageCounter==0&&
           <div className="flex space-x-2 mx-auto my-2">

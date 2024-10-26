@@ -1,7 +1,7 @@
 export const LandingPage = () =>{
     return(
-        <div className="w-5/6 h-screen rounded-md flex justify-self-center bg-purple-300">
-            <p className="mt-2 mx-auto justify-self-center">Landing page</p>
+        <div className="w-5/6 rounded-md flex flex-col justify-self-center">
+            <img className="border-solid border-black border-2 rounded-md mt-2" src="/assets/Logo/BrodinAwardsLogo.png" alt="Brodin Game Awards Logo" />
         </div>
     );
 }
