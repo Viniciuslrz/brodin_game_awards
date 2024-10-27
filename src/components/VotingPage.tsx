@@ -4,18 +4,21 @@ import type { Game } from "@/types/Game";
 type Props = {
     pagenumber: number,
     category: string,
-    games: Game[]
+    games: Game[],
+    updateVotes: (votes: Game[]) => void,
+    setErrorModal: (errorModal:boolean) => void;
 }
 
-export const VotingPage = ({games:initialGames, category, pagenumber}:Props) =>{
+export const VotingPage = ({games:initialGames, category, pagenumber, updateVotes, setErrorModal}:Props) =>{
     const [games, setGames] = useState(initialGames);
 
     const handleCheck = (id: number) => {
-        setGames(prevGames => 
-            prevGames.map((game, index) => 
-                id === index ? { ...game, check: !game.check } : game
-            )
+        const updatedGames = games.map((game, index) =>
+            id === index ? { ...game, check: !game.check } : game
         );
+        setGames(updatedGames);
+        const votes = updatedGames.filter(game => game.check === true);
+        updateVotes(votes);
     };
 
     return(
