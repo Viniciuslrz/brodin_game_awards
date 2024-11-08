@@ -16,7 +16,8 @@ const page = () => {
   const [pageCounter, setpageCounter] = useState<number>(0);
   const [toggleModal, setToggleModal] = useState<boolean>(false);
   const [errorModal, setErrorModal] = useState<boolean>(false);
-  const [votes, setVotes] = useState<Game[]>([{name:"",id:0, check:false},{name:"",id:0, check:false}]);
+  const [votes, setVotes] = useState<Game[]>([]);
+  
   const updateVotes = (updatedVotes: Game[]) =>{
     setVotes(updatedVotes);
   }
