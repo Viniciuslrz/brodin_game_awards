@@ -50,13 +50,13 @@ const page = () => {
         <ErrorModal onClick={handleErrorModal}/>
       }
       {toggleModal==true&&pageCounter==1&&
-        <ConfirmationModal category={"Fogo de Palha do Ano"} confirmVote={()=>handleNextPage(pageCounter)} changeVote={handleModal} votes={votes}/>
+        <ConfirmationModal clearVotes={()=>setVotes([])} category={"Fogo de Palha do Ano"} confirmVote={()=>handleNextPage(pageCounter)} changeVote={handleModal} votes={votes}/>
       }
       {toggleModal==true&&pageCounter==2&&
-        <ConfirmationModal category={"Tocha Olímpica"} confirmVote={()=>handleNextPage(pageCounter)} changeVote={handleModal} votes={votes}/>
+        <ConfirmationModal clearVotes={()=>setVotes([])} category={"Tocha Olímpica"} confirmVote={()=>handleNextPage(pageCounter)} changeVote={handleModal} votes={votes}/>
       }
       {toggleModal==true&&pageCounter==3&&
-        <ConfirmationModal category={"Jogo que Uniu Todas as Tribos"} confirmVote={()=>handleNextPage(pageCounter)} changeVote={handleModal} votes={votes}/>
+        <ConfirmationModal clearVotes={()=>setVotes([])} category={"Jogo que Uniu Todas as Tribos"} confirmVote={()=>handleNextPage(pageCounter)} changeVote={handleModal} votes={votes}/>
       }
       <div className="w-5/6 h-5/6 rounded-md grid bg-slate-300 text-black">
         {pageCounter==0&&<LandingPage/>}
@@ -67,7 +67,7 @@ const page = () => {
         {pageCounter==5&&<ResultsPage/>}
         <div className="flex space-x-2 mx-auto my-2">
           {pageCounter==0&&<CustomButton activeColor="green" label="Começar" onClick={()=>handleNextPage(pageCounter)}/>}
-          {pageCounter<4&&pageCounter>0&&<CustomButton activeColor="red" label="Voltar" onClick={()=>handlePrevPage(toggleModal)}/>}
+          {/* {pageCounter<4&&pageCounter>0&&<CustomButton activeColor="red" label="Voltar" onClick={()=>handlePrevPage(toggleModal)}/>} */}
           {pageCounter<4&&pageCounter>0&&<CustomButton activeColor="green" label="Avançar" onClick={catchError}/>}
           {pageCounter==4&&<CustomButton activeColor="green" label="Resultados" onClick={() => setpageCounter(5)}/>}
         </div>

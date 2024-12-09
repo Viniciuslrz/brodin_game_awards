@@ -3,6 +3,7 @@ type Props = {
     onClick: () => void;
     className?: string;
     activeColor?: string;
+    disabled?:boolean;
 }
 export const CustomButton = ({label, onClick, className, activeColor}:Props) => {
     return(
