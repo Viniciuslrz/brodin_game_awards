@@ -1,3 +1,4 @@
+//[ErrorModal.tsx]
 import { CustomButton } from "./CustomButton";
 import type { Game } from "@/types/Game";
 

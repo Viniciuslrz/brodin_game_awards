@@ -1,3 +1,4 @@
+//[page.tsx]
 "use client"
 import { useState } from "react";
 import { VotingPage } from "@/components/VotingPage";

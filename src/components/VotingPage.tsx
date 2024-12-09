@@ -1,3 +1,4 @@
+//[VotingPAge.ts]
 import { useState, useEffect } from "react";
 import type { Game } from "@/types/Game";
 

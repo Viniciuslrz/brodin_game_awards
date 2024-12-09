@@ -1,3 +1,4 @@
+//[TochaOlimpica.ts]
 import type { Game } from "@/types/Game";
 
 export const TochaOlimpica:Game[] =[
@@ -10,5 +11,6 @@ export const TochaOlimpica:Game[] =[
     {id: 7, name:"Pokemon GO", check: false, category:"Tocha Olímpica"},
     {id: 8, name:"Pokemon TCG", check: false, category:"Tocha Olímpica"},
     {id: 9, name:"Pokemon Unite", check: false, category:"Tocha Olímpica"},
-    {id: 10, name:"Rainbow Six Siege", check: false, category:"Tocha Olímpica"}
+    {id: 10, name:"Project Winter", check: false, category:"Tocha Olímpica"},
+    {id: 11, name:"Rainbow Six Siege", check: false, category:"Tocha Olímpica"}
 ];

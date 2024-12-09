@@ -1,4 +1,4 @@
-// [confirmationModal.tsx]
+//[ConfirmationModal.tsx]
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "@/app/firebaseConfig";
 import { CustomButton } from "./CustomButton";
