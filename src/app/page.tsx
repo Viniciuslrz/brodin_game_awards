@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { VotingPage } from "@/components/VotingPage";
 import { ResultsPage } from "@/components/ResultsPage";
-import { HighlightsPage } from "@/components/HighlightsPage";
+import { QuotesPage } from "@/components/QuotesPage";
 import { LandingPage } from "@/components/LandingPage";
 import { FogoDePalhaDoAno } from "@/data/FogoDePalhaDoAno";
 import { TochaOlimpica } from "@/data/TochaOlimpica";
@@ -12,6 +12,7 @@ import { ConfirmationModal } from "@/components/ConfirmationModal";
 import { TodasAsTribos } from "@/data/TodasAsTribos";
 import { Game } from "@/types/Game";
 import { ErrorModal } from "@/components/ErrorModal";
+import { ForaDeContexto } from "@/data/ForaDeContexto";
 
 const page = () => {
   const [pageCounter, setpageCounter] = useState<number>(0);
@@ -64,11 +65,10 @@ const page = () => {
         {pageCounter==1&&<VotingPage pagenumber={1} category={"Fogo de Palha do Ano"} games={FogoDePalhaDoAno} updateVotes={updateVotes} setErrorModal={setErrorModal}/>}
         {pageCounter==2&&<VotingPage pagenumber={2} category={"Tocha Olímpica"} games={TochaOlimpica} updateVotes={updateVotes} setErrorModal={setErrorModal}/>}
         {pageCounter==3&&<VotingPage pagenumber={3} category={"Jogo que Uniu Todas as Tribos"} games={TodasAsTribos} updateVotes={updateVotes} setErrorModal={setErrorModal}/>}
-        {pageCounter==4&&<HighlightsPage/>}
+        {pageCounter==4&&<QuotesPage quotes={ForaDeContexto}/>}
         {pageCounter==5&&<ResultsPage/>}
         <div className="flex space-x-2 mx-auto my-2">
           {pageCounter==0&&<CustomButton activeColor="green" label="Começar" onClick={()=>handleNextPage(pageCounter)}/>}
-          {/* {pageCounter<4&&pageCounter>0&&<CustomButton activeColor="red" label="Voltar" onClick={()=>handlePrevPage(toggleModal)}/>} */}
           {pageCounter<4&&pageCounter>0&&<CustomButton activeColor="green" label="Avançar" onClick={catchError}/>}
           {pageCounter==4&&<CustomButton activeColor="green" label="Resultados" onClick={() => setpageCounter(5)}/>}
         </div>
